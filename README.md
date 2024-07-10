@@ -16,11 +16,10 @@ Also note that the NetImGui branch is not up to date with any of this fork's cha
 
 Fork Additions/Fixes
 --------------------
- - Updated core source files for Unreal Engine 5.
- - Updated Dear ImGui to 1.87.
- - Added ImPlot v0.13 WIP.
+ - Updated core source files for Unreal Engine 5.4.
+ - Updated Dear ImGui to 1.90.9.
  - `ImGui::IsKey*` now functional with all known ImGui keys.
- - Updated input handling flow to be [standard compliant](https://github.com/ocornut/imgui/issues/4921) with Dear ImGui 1.87 which makes ImGui react better at low FPS. Will add `IMGUI_DISABLE_OBSOLETE_KEYIO` preprocessor once I've ripped out old style input.
+ - Updated input handling flow to be [standard compliant](https://github.com/ocornut/imgui/issues/4921) with Dear ImGui 1.87 which makes ImGui react better at low FPS
  - Allowed `UTexture` for Texture Manager so render targets can also be rendered to quads rather than just being limited to using `UTexture2D` instances.
  - Added the ability to instruct ImGui context to build custom fonts (like FontAwesome).
 
@@ -28,11 +27,11 @@ Status
 ------
 UnrealImGui Version: 1.22
 
-ImGui version: 1.99
+ImGui version: 1.90.9
 
 ImPlot version: v0.17 WIP
 
-Supported Unreal Engine version: 5.0*
+Supported Unreal Engine version: 5.4*
 
 \* *The original repository has support for later versions of UE4. I've not tested this fork on UE4 variants, I only know it works for UE5 currently.*
 
