@@ -2,7 +2,7 @@ Unreal ImGui
 ============
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
-Unreal ImGui is an Unreal Engine 4 plug-in that integrates [Dear ImGui](https://github.com/ocornut/imgui) developed by Omar Cornut.
+Unreal ImGui is an Unreal Engine 5 plug-in that integrates [Dear ImGui](https://github.com/ocornut/imgui) developed by Omar Cornut.
 
 Dear ImGui is an immediate-mode graphical user interface library that is very lightweight and easy to use. It can be very useful when creating debugging tools.
 
@@ -17,7 +17,7 @@ Also note that the NetImGui branch is not up to date with any of this fork's cha
 Fork Additions/Fixes
 --------------------
  - Updated core source files for Unreal Engine 5.4.
- - Updated Dear ImGui to 1.91.0.
+ - Updated Dear ImGui to 1.92.2.
  - `ImGui::IsKey*` now functional with all known ImGui keys.
  - Updated input handling flow to be [standard compliant](https://github.com/ocornut/imgui/issues/4921) with Dear ImGui 1.87 which makes ImGui react better at low FPS
  - Allowed `UTexture` for Texture Manager so render targets can also be rendered to quads rather than just being limited to using `UTexture2D` instances.
@@ -27,7 +27,7 @@ Status
 ------
 UnrealImGui Version: 1.22
 
-ImGui version: 1.901.0
+ImGui version: 1.92.2
 
 ImPlot version: v0.17 WIP
 
