@@ -10,15 +10,15 @@
 namespace Utilities
 {
 	// Invalid context index for parameters that cannot be resolved to a valid world.
-	static constexpr int32 INVALID_CONTEXT_INDEX = -10;
+	inline constexpr int32 INVALID_CONTEXT_INDEX = -10;
 
 	// Standalone context index.
-	static constexpr int32 STANDALONE_GAME_CONTEXT_INDEX = -2;
+	inline constexpr int32 STANDALONE_GAME_CONTEXT_INDEX = -2;
 
 #if WITH_EDITOR
 
 	// Editor context index. We are lacking flexibility here, so we might need to change it somehow.
-	static constexpr int32 EDITOR_CONTEXT_INDEX = -1;
+	inline constexpr int32 EDITOR_CONTEXT_INDEX = -1;
 
 	FORCEINLINE int32 GetWorldContextIndex(const FWorldContext& WorldContext)
 	{
