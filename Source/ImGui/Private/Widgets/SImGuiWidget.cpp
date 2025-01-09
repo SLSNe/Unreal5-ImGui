@@ -21,6 +21,7 @@
 #include <GameFramework/GameUserSettings.h>
 #include <SlateOptMacros.h>
 #include <Widgets/SViewport.h>
+#include "UnrealClient.h"
 
 #include <utility>
 

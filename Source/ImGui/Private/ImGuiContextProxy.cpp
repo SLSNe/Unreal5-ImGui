@@ -249,8 +249,11 @@ void FImGuiContextProxy::UpdateDrawData(ImDrawData* DrawData)
 {
 	if (DrawData && DrawData->CmdListsCount > 0)
 	{
+#if (ENGINE_MAJOR_VERSION >= 5 && ENGINE_MINOR_VERSION >= 4)
 		DrawLists.SetNum(DrawData->CmdListsCount, EAllowShrinking::No);
-
+#else
+		DrawLists.SetNum(DrawData->CmdListsCount, false);
+#endif
 		for (int Index = 0; Index < DrawData->CmdListsCount; Index++)
 		{
 			DrawLists[Index].TransferDrawData(*DrawData->CmdLists[Index]);

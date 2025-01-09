@@ -8,7 +8,8 @@
 #include <Engine/Engine.h>
 #include <GameFramework/GameUserSettings.h>
 #include <Misc/ConfigCacheIni.h>
-
+#include "GenericPlatform/GenericApplication.h"
+#include "Framework/Application/SlateApplication.h"
 
 //====================================================================================================
 // FImGuiDPIScaleInfo
