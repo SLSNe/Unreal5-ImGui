@@ -27,15 +27,15 @@ public class ImGui : ModuleRules
 
 #if UE_4_24_OR_LATER
 		bLegacyPublicIncludePaths = false;
+        bTreatAsEngineModule = true;
 #if UE_5_6_OR_LATER
-		CppCompileWarningSettings.ShadowVariableWarningLevel = WarningLevel.Error;
+        CppCompileWarningSettings.ShadowVariableWarningLevel = WarningLevel.Error;
 #else
 		ShadowVariableWarningLevel = WarningLevel.Error;
 #endif
-        bTreatAsEngineModule = true;
 #endif
 
-        PublicIncludePaths.AddRange(
+		PublicIncludePaths.AddRange(
 			new string[] {
 				Path.Combine(ModuleDirectory, "../ThirdParty/ImGuiLibrary/Include"),
 				// ... add public include paths required here ...
