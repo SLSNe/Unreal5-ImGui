@@ -159,6 +159,11 @@ FReply UImGuiInputHandler::OnMouseWheel(const FPointerEvent& MouseEvent)
 	return ToReply(true);
 }
 
+void UImGuiInputHandler::ClearMouseDown()
+{
+	InputState->ClearMouseDown();
+}
+
 FReply UImGuiInputHandler::OnMouseMove(const FVector2D& MousePosition, const FPointerEvent& MouseEvent)
 {
 	if (MouseEvent.IsTouchEvent())

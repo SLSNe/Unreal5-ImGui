@@ -40,6 +40,11 @@ public:
 	// @param bIsDown - True, if button is down
 	void SetMouseDown(const FKey& MouseButton, bool bIsDown);
 
+	// Utility to release all mouse buttons.
+	// Needed for situations when mouse leaves a viewport
+	// while being in a pressed state.
+	void ClearMouseDown();
+
 	// Get mouse wheel delta accumulated during the last frame.
 	float GetMouseWheelDelta() const { return MouseWheelDelta; }
 

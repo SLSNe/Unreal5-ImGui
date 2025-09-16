@@ -82,6 +82,13 @@ public:
 	virtual FReply OnMouseWheel(const FPointerEvent& MouseEvent);
 
 	/**
+	 * Utility to release all mouse buttons.
+	 * Needed for situations when mouse leaves a viewport
+	 * while being in a pressed state.
+	 */
+	virtual void ClearMouseDown();
+
+	/**
 	 * Called to handle mouse move events.
 	 * @param MousePosition Mouse position (in ImGui space)
 	 * @param MouseEvent Optional mouse event passed from Slate

@@ -435,6 +435,19 @@ void SImGuiWidget::UpdateInputState()
 	auto& Properties = ModuleManager->GetProperties();
 	auto* ContextProxy = ModuleManager->GetContextManager().GetContextProxy(ContextIndex);
 
+	const bool bGameViewportFocusedChanged = (GameViewport->Viewport->HasFocus() != bGameViewportFocused);
+	if (bGameViewportFocusedChanged)
+	{
+		bGameViewportFocused = !bGameViewportFocused;
+		if (bGameViewportFocused)
+		{
+			IMGUI_WIDGET_LOG(Log, TEXT("ImGui Widget %d - Game Viewport refocused. Clearing mouse inputs."),
+				ContextIndex);
+
+			InputHandler->ClearMouseDown();
+		}
+	}
+
 	const bool bEnableTransparentMouseInput = Properties.IsMouseInputShared()
 #if PLATFORM_ANDROID || PLATFORM_IOS
 		&& (FSlateApplication::Get().GetCursorPos() != FVector2D::ZeroVector)
