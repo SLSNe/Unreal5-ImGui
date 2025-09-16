@@ -154,6 +154,7 @@ private:
 	bool bAdaptiveCanvasSize = false;
 	bool bUpdateCanvasSize = false;
 	bool bCanvasControlEnabled = false;
+	bool bGameViewportFocused = true;
 
 	TSharedPtr<SImGuiCanvasControl> CanvasControlWidget;
 	TWeakPtr<SWidget> PreviousUserFocusedWidget;

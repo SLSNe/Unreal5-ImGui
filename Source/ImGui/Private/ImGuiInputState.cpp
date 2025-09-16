@@ -57,6 +57,15 @@ void FImGuiInputState::SetMouseDown(const FKey& MouseButton, bool bIsDown)
 	imguiIO->AddMouseButtonEvent(mouseIndex, bIsDown);	
 }
 
+void FImGuiInputState::ClearMouseDown()
+{
+	const int32 MouseIndexCount = UE_ARRAY_COUNT(imguiIO->MouseDown);
+	for (int32 I = 0; I < MouseIndexCount; I++)
+	{
+		imguiIO->AddMouseButtonEvent(I, false);
+	}
+}
+
 void FImGuiInputState::AddMouseWheelDelta(float DeltaValue)
 {
 	imguiIO->AddMouseWheelEvent(0, DeltaValue);
